@@ -4,7 +4,9 @@ from langchain_core.runnables import RunnablePassthrough
 from ecommbot.ingest import ingestdata
 from langchain_groq import ChatGroq
 from langchain_google_genai import ChatGoogleGenerativeAI
-
+from dotenv import load_dotenv
+import os 
+import google.generativeai as genai
 
 load_dotenv()
 os.getenv("GOOGLE_API_KEY")
@@ -51,3 +53,6 @@ if __name__=='__main__':
     print(chain.invoke("can you tell me the best bluetooth buds?"))
     
     
+
+
+
